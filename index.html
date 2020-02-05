@@ -9,38 +9,56 @@
 </head>
 
 <body>
-   <hearder>
-    <h1 id="header">The restaurant</h1>
-    <nav>
-        <ul>
-            <li>starter</li>
-            <li>main</li>
-            <li>dessert</li>
-            <li>drinks</li>
-            <li>sideorders</li>
-        </ul>
-    </nav>
-</hearder>
-    <main>
+    <header>
+        <h1 id="header">The restaurant</h1>
+        <nav>
+            <ul>
+                <li>starter</li>
+                <li>main</li>
+                <li>dessert</li>
+                <li>drinks</li>
+                <li>sideorders</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
 
-    <div class="starters">
-        <img src="img/small/ringbroed-sm.jpg" alt="ringbread">
-        <h2>russian ringbread</h2>
-
-        <p>price: 29 kr</p>
-
-    </div>
-
-    <div class="main">
-        <img src="img/small/russisktapas-sm.jpg" alt="tapas">
-        <h2>russian tapas with tomato and bread</h2>
-        <p>price: 199 kr <span>-20%</span></p>
-
-    </div>
+        <div class="dish">
+            <img src="img/small/ringbroed-sm.jpg" alt="ringbread">
+            <h2 class="head">russian ringbread</h2>
 
 
+            <div class="buttons-and-price">
+                <p>price: 29 kr</p>
+                <div class="buttons">
+                    <button>-</button>
+                    <div class="counter">0</div>
+                    <button>+</button>
 
-</main>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="dish">
+            <img src="img/small/russisktapas-sm.jpg" alt="tapas">
+            <h2 class="head">russian tapas with tomato and bread</h2>
+
+
+            <div class="buttons-and-price">
+                <p>price: 199 kr <span>-20%</span></p>
+                <div class="buttons">
+                    <button>-</button>
+                    <div class="counter">0</div>
+                    <button>+</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
     <footer>
 
     </footer>

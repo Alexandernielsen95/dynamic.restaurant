@@ -1,14 +1,58 @@
 body {
     background-color: crimson;
     font-family: sans-serif;
+    background-color: forestgreen;
 
 }
+
 #header {
-    align-self: center;
+    text-align: center;
+    background-color: steelblue;
 }
 
-.starters {
+.dish {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3000px, 1fr));
+    grid-template-columns: repeat(auto-fit);
+    background-color: aliceblue;
+    width: 400px;
+    margin: 4px;
 
+
+
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 420px 420px 420px;
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .main {
+        grid-template-columns: auto;
+    }
+}
+
+
+.buttons-and-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4px;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.counter {
+    text-align: center;
+}
+
+.head {
+    margin: 6px;
 }
