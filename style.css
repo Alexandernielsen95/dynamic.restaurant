@@ -1,0 +1,14 @@
+body {
+    background-color: crimson;
+    font-family: sans-serif;
+
+}
+#header {
+    align-self: center;
+}
+
+.starters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3000px, 1fr));
+
+}
