@@ -56,3 +56,14 @@ body {
 .head {
     margin: 6px;
 }
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#wrapper > * {
+  margin: 1rem;
+}
+#wrapper > header {
+  margin: 0;
+}
