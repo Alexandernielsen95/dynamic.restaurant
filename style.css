@@ -5,6 +5,17 @@ body {
 
 }
 
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#wrapper > * {
+  margin: 1rem;
+}
+#wrapper > header {
+  margin: 0;
+}
+
 #header {
     text-align: center;
     background-color: steelblue;
@@ -30,7 +41,7 @@ body {
 
 @media only screen and (max-width: 800px) {
     .main {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -57,13 +68,3 @@ body {
     margin: 6px;
 }
 
-#wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-#wrapper > * {
-  margin: 1rem;
-}
-#wrapper > header {
-  margin: 0;
-}
