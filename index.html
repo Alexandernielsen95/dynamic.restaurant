@@ -11,8 +11,8 @@
 <body>
 
     <div id="wrapper">
-       <header>
-        <h1 id="header">The best restaurant</h1>
+        <header>
+            <h1 id="header">The best restaurant</h1>
 
             <nav>
                 <a href="/">Home</a>
@@ -31,15 +31,23 @@
                         <div class="buttons-and-price">
                             <!--                                    <p>price: 29 kr</p>-->
                             <p class="soldout">Sold Out!</p>
-                            <p class="price price-discount"><span>xxx</span></p>
-                            <p class="price price-full"><span>69,-</span></p>
-                            <div class="buttons">
-                               <button id="readMore">Read more</button>
-                                <button>-</button>
-                                <div class="counter">0</div>
-                                <button>+</button>
+                            <div class="price-old">
+                                <p class="price price-discount"><span>xxx</span></p>
 
                             </div>
+
+                            <div class="buttons">
+
+                                <button id="readMore">Read more</button>
+                            </div>
+
+                            <div class="price-new">
+                                <p class="price price-full"><span>69,-</span></p>
+
+                            </div>
+                            <button id="minus">-</button>
+                            <div class="counter">0</div>
+                            <button id="plus">+</button>
 
                         </div>
 
@@ -49,18 +57,55 @@
 
         </main>
         <footer>
-
+            <section>
+                <h3>Locations</h3>
+                <ul>
+                    <li>
+                        <address>Nørrebrogade 84</address>
+                        <a href="tel:12121212">+45 12 12 12 12</a>
+                    </li>
+                    <li>
+                        <address>Nørrebrogade 86</address>
+                        <a href="tel:12121213">+45 12 12 12 13</a>
+                    </li>
+                    <li>
+                        <address>Nørrebrogade 88</address>
+                        <a href="tel:12121214">+45 12 12 12 14</a>
+                    </li>
+                    <li>
+                        <address>Nørrebrogade 90</address>
+                        <a href="tel:12121215">+45 12 12 12 15</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Contact</h3>
+                <address>
+                    <h4>Alexander Nielsen</h4>
+                    <p>Nørrebrogade 92</p>
+                    <p><a href="tel:12121216">+45 12 12 12 16</a></p>
+                </address>
+            </section>
+            <section>
+                <h3>Misc</h3>
+                <blockquote>
+                    <p>This is the best restaurant in town come in and try some of our delicious food.</p>
+                    <cite>the owner</cite>
+                </blockquote>
+            </section>
         </footer>
     </div>
 
     <div class="modal-background hide">
-  <div class="modal-content">
-    <h3 class="modal-name">NAME</h3>
-    <img src="" alt="" class="modal-image" />
-    <p class="modal-description">LONG DESCRIPTION</p>
-    <h4 class="modal-price">PRICE</h4>
-  </div>
-</div>
+        <div class="modal-content">
+            <h3 class="modal-name">NAME</h3>
+            <img src="" alt="" class="modal-image" />
+            <p class="modal-description">LONG DESCRIPTION</p>
+            <p class="modal-vegetarian">vegetarian</p>
+            <h4 class="modal-price">PRICE</h4>
+
+        </div>
+    </div>
 
     <script src="re.js"></script>
 </body></html>

@@ -1,46 +1,47 @@
 const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
-  modal.classList.add("hide");
+    modal.classList.add("hide");
 });
 
 
 fetch("https://kea-alt-del.dk/t5/api/categories")
-.then(res => res.json())
-.then(createCategories)
+    .then(res => res.json())
+    .then(createCategories)
 
-function createCategories(data){
-console.log(data)
-data.forEach(function(oneCat){
+function createCategories(data) {
+    console.log(data)
+    data.forEach(function (oneCat) {
 
-    const a = document.createElement("a");
-    a.setAttribute("href", `#${oneCat}`);
-    a.textContent= oneCat;
-    document.querySelector("#wrapper>header>nav").appendChild(a);
+        const a = document.createElement("a");
+        a.setAttribute("href", `#${oneCat}`);
+        a.textContent = oneCat;
+        document.querySelector("#wrapper>header>nav").appendChild(a);
 
 
 
-    const section = document.createElement("section");
-    section.id= oneCat;
-    const h2 = document.createElement("h2");
-    h2.textContent=oneCat;
+        const section = document.createElement("section");
+        section.id = oneCat;
+        const h2 = document.createElement("h2");
+        h2.textContent = oneCat;
 
-    section.appendChild(h2);
-    console.log(section)
+        section.appendChild(h2);
+        console.log(section)
 
-    document.querySelector("main").appendChild(section);
-})
-getProducts();
+        document.querySelector("main").appendChild(section);
+    })
+    getProducts();
 }
 
-function  getProducts(){
-fetch("https://kea-alt-del.dk/t5/api/productlist")
-    .then(function (response) {
-        return response.json()
-    })
-    .then(function (data) {
-        showData(data)
-    })
+function getProducts() {
+    fetch("https://kea-alt-del.dk/t5/api/productlist")
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            showData(data)
+        })
 }
+
 function showData(jsonData) {
     console.log(jsonData)
 
@@ -56,8 +57,8 @@ function showSingleDish(dish) {
 
     copy.querySelector("h2").textContent = dish.name;
     copy.querySelector("p").textContent = dish.shortdescription;
-    if(!dish.soldout) {
-    copy.querySelector(".soldout").remove();
+    if (!dish.soldout) {
+        copy.querySelector(".soldout").remove();
     }
 
 
@@ -80,21 +81,32 @@ function showSingleDish(dish) {
     copy.querySelector("img").setAttribute("src", smallImg)
 
 
+    copy.querySelector("#readMore").addEventListener("click", () => {
+        console.log("click", dish)
+        fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
+            .then(res => res.json())
+            .then(showDetails);
+    });
+
+    console.log(`#${dish.category}`)
+    document.querySelector(`#${dish.category}`).appendChild(copy);
+    //    document.querySelector("#starters").appendChild(copy)
+
+}
+
+/*showDish();
 function showDish(dish) {
+
   copy.querySelector("#readMore").addEventListener("click", () => {
-  console.log("click", dish)
+  console.log("click" , dish)
     fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
       .then(res => res.json())
       .then(showDetails);
   });
-}
-    console.log(`#${dish.category}`)
-    document.querySelector(`#${dish.category}`).appendChild(copy);
-//    document.querySelector("#starters").appendChild(copy)
-
-}
+}*/
 function showDetails(data) {
-  modal.querySelector(".modal-name").textContent = data.name;
-  modal.querySelector(".modal-description").textContent = data.longdescription;
-  modal.classList.remove("hide");
+    modal.querySelector(".modal-name").textContent = data.name;
+    modal.querySelector(".modal-description").textContent = data.longdescription;
+    modal.querySelector(".modal-vegetarian").textContent = "Vegetarian: " + data.vegetarian;
+    modal.classList.remove("hide");
 }
