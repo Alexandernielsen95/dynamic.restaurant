@@ -88,10 +88,14 @@ nav a:hover {
     margin-top: 10px;
     max-width: 400px;
     margin: 0 auto;
+    border-radius:15px;
+
 }
+
 
 .dish {
     position: relative;
+
 
 
 }
@@ -99,6 +103,8 @@ nav a:hover {
 img {
     max-width: 100%;
     height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .head {
