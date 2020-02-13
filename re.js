@@ -73,7 +73,7 @@ function showSingleDish(dish) {
         copy.querySelector(".price-full span").textContent = newprice;
     } else {
         copy.querySelector(".price-discount").remove()
-        copy.querySelector(".price-full").textContent = dish.price;
+        copy.querySelector(".price-full span").textContent = dish.price;
     }
 
     const base = "https://kea-alt-del.dk/t5/site/imgs/";
@@ -108,12 +108,11 @@ function showDetails(data) {
     modal.querySelector(".modal-name").textContent = data.name;
     modal.querySelector(".modal-description").textContent = data.longdescription;
     modal.querySelector(".modal-vegetarian").textContent = "Vegetarian: " + data.vegetarian;
-    modal.querySelector(".modal-price").textContent = "price: " + data.price;
+    modal.querySelector(".modal-price").textContent = "price DKK: " + data.price;
      modal.querySelector(".modal-alcohol").textContent = "alcohol: " + data.alcohol;
      modal.querySelector(".modal-region").textContent = "region: " + data.region;
      modal.querySelector(".modal-allergens").textContent = "allergens: " + data.allergens;
      modal.querySelector(".modal-stars").textContent = "stars: " + data.stars;
     modal.classList.remove("hide");
 }
-
 
