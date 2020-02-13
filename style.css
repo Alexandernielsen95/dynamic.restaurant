@@ -14,12 +14,15 @@ body {
     background-color: forestgreen;
     line-height: 1.8rem;
 }
+
 #wraper {
     align-content: center;
 }
+
 #wrapper > * {
     margin: 1rem;
 }
+
 #wrapper > header {
     margin: 0;
 }
@@ -32,17 +35,21 @@ h2 {
 
 #header {
     text-align: center;
-    background-color: steelblue;
+    background-color: #6495ED;
 }
+
 nav {
     /* consider flexbox */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
 /*
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items:stretch;
+    width: 100vw;
+    background: #6495ED;
 */
 
 }
@@ -62,12 +69,14 @@ nav a:hover {
     color: dodgerblue;
     border-bottom: 1px solid dodgerblue;
 }
+
 .main > section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
     margin: 0 1rem;
 }
+
 .main > section > h2 {
     grid-column: 1/-1;
 
@@ -80,22 +89,27 @@ nav a:hover {
     max-width: 400px;
     margin: 0 auto;
 }
+
 .dish {
     position: relative;
 
 
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
+
 .head {
     /*    margin: 6px;*/
     text-align: center;
 }
+
 .des {
     text-align: center;
 }
+
 .buttons-and-price {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -103,11 +117,13 @@ img {
     margin-top: 30px;
 
 }
+
 .soldout {
     display: none;
     opacity: 78%;
     margin-bottom: 10%;
 }
+
 .dish .soldout {
     position: absolute;
     top: 36%;
@@ -118,12 +134,14 @@ img {
     background-color: hotpink;
     transform: rotate(-45deg);
 }
+
 .price-old span,
 .price-new span {
     margin: 0;
     align-content: center;
 
 }
+
 .price-discount {
     text-decoration: line-through;
     text-align: center;
@@ -132,9 +150,10 @@ img {
 .price-full {
     text-align: center;
 }
+
 .readMore {
     background-color: cornflowerblue;
-    width: 88%;
+    width: 90%;
     padding: 1rem;
     align-self: center;
     margin-left: 5%
@@ -166,10 +185,9 @@ img {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: flex-end;
     margin: 8px;
-
-
 }
 */
+
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -217,10 +235,3 @@ footer {
 .counter {
     text-align: center;
 }
-
-
-
-
-
-
-
