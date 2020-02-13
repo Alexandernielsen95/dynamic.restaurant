@@ -7,49 +7,44 @@ html {
 }
 
 body {
+    margin: 0;
     align-content: center;
     background-color: crimson;
     font-family: sans-serif;
     background-color: forestgreen;
     line-height: 1.8rem;
-
 }
-
-h2 {
-    text-align: center
-}
-
-#wrapper {
-
-    display: grid;
-    grid-template-columns: 1fr;
-
-
-
-}
-
-/*
-#plus #minus {
+#wraper {
     align-content: center;
 }
-*/
-
 #wrapper > * {
     margin: 1rem;
 }
-
 #wrapper > header {
     margin: 0;
+}
+
+
+
+h2 {
+    text-align: center
 }
 
 #header {
     text-align: center;
     background-color: steelblue;
 }
-
 nav {
+    /* consider flexbox */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+/*
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:stretch;
+*/
+
 }
 
 nav a {
@@ -67,37 +62,123 @@ nav a:hover {
     color: dodgerblue;
     border-bottom: 1px solid dodgerblue;
 }
-
-.dish {
-    display: grid;
-    grid-template-columns: repeat(auto-fit);
-    background-color: aliceblue;
-    width: 400px;
-    height: 575px;
-    margin: 4px;
-    margin-top: 10px;
-}
-
-
 .main > section {
     display: grid;
-    grid-template-columns: 420px 420px 420px;
-
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    margin: 0 1rem;
 }
-
-
-
 .main > section > h2 {
     grid-column: 1/-1;
 
+}
 
+.dish {
+    display: grid;
+    background-color: aliceblue;
+    margin-top: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.dish {
+    position: relative;
+
+
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.head {
+    /*    margin: 6px;*/
+    text-align: center;
+}
+.des {
+    text-align: center;
+}
+.buttons-and-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 4px;
+    margin-top: 30px;
+
+}
+.soldout {
+    display: none;
+    opacity: 78%;
+    margin-bottom: 10%;
+}
+.dish .soldout {
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    display: block;
+    background-color: hotpink;
+    transform: rotate(-45deg);
+}
+.price-old span,
+.price-new span {
+    margin: 0;
+    align-content: center;
+
+}
+.price-discount {
+    text-decoration: line-through;
+    text-align: center;
+}
+
+.price-full {
+    text-align: center;
+}
+.readMore {
+    background-color: cornflowerblue;
+    width: 88%;
+    padding: 1rem;
+    align-self: center;
+    margin-left: 5%
+        /*    display: grid;*/
+        /*
+    grid-column-end: 1fr 1fr;
+    width: 288px;
+    height: 40px;
+*/
+}
+
+.readMore:hover {
+    cursor: pointer;
+    background: cornflowerblue;
+    box-shadow: 2px 2px 0px 0px blue;
+    opacity: 50%;
+}
+
+
+.readMore:active {
+    background: hotpink;
+    box-shadow: 2px 2px 0px 0px pink;
+    transition: all 0.1s;
+}
+/*
+.buttons {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: flex-end;
+    margin: 8px;
+
+
+}
+*/
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media only screen and (max-width: 800px) {
-    .main {
-        grid-template-columns: 1fr;
-    }
+    .main {}
 }
+
 
 .hide {
     display: none;
@@ -120,99 +201,26 @@ nav a:hover {
     padding: 2em;
 }
 
-.buttons-and-price {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 4px;
-    margin-top: 30px;
-}
-
-.price-old span,
-.price-new span {
-    margin: 0;
-    align-content: center;
-
-}
 
 
-#readMore {
-    background-color: cornflowerblue;
-    display: grid;
-    grid-column-end: 1fr 1fr;
-    width: 288px;
-    height: 40px;
-}
-
-#readMore:hover {
-    cursor: pointer;
-    /*    color: cornflowerblue;*/
-    background: cornflowerblue;
-    box-shadow: 2px 2px 0px 0px blue;
-    opacity: 50%;
-}
 
 
-#readMore:active {
-    background: hotpink;
-    box-shadow: 2px 2px 0px 0px pink;
-    transition: all 0.1s;
-}
 
-.price-discount {
-    text-decoration: line-through;
-}
 
-#wraper {
-    align-content: center;
-}
 
-.buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: flex-end;
-    margin: 8px;
-}
+
+
+
+
 
 
 .counter {
     text-align: center;
 }
 
-.head {
-    margin: 6px;
-    text-align: center;
-}
-
-.des {
-    text-align: center;
-}
-
-.soldout {
-    display: none;
-    opacity: 78%;
-
-}
-
-.dish {
-    position: relative;
-
-}
 
 
-.dish .soldout {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: black;
-    display: block;
-    background-color: hotpink;
-    transform: rotate(-45deg);
 
 
-}
 
-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
+

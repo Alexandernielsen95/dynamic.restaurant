@@ -81,7 +81,7 @@ function showSingleDish(dish) {
     copy.querySelector("img").setAttribute("src", smallImg)
 
 
-    copy.querySelector("#readMore").addEventListener("click", () => {
+    copy.querySelector(".readMore").addEventListener("click", () => {
         console.log("click", dish)
         fetch(`https://kea-alt-del.dk/t5/api/product?id=${dish.id}`)
             .then(res => res.json())
