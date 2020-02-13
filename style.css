@@ -7,6 +7,7 @@ html {
 }
 
 body {
+    align-content: center;
     background-color: crimson;
     font-family: sans-serif;
     background-color: forestgreen;
@@ -26,6 +27,12 @@ h2 {
 
 
 }
+
+/*
+#plus #minus {
+    align-content: center;
+}
+*/
 
 #wrapper > * {
     margin: 1rem;
@@ -127,6 +134,7 @@ nav a:hover {
 
 }
 
+
 #readMore {
     background-color: cornflowerblue;
     display: grid;
@@ -172,6 +180,11 @@ nav a:hover {
 
 .head {
     margin: 6px;
+    text-align: center;
+}
+
+.des {
+    text-align: center;
 }
 
 .soldout {

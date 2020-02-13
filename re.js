@@ -108,5 +108,12 @@ function showDetails(data) {
     modal.querySelector(".modal-name").textContent = data.name;
     modal.querySelector(".modal-description").textContent = data.longdescription;
     modal.querySelector(".modal-vegetarian").textContent = "Vegetarian: " + data.vegetarian;
+    modal.querySelector(".modal-price").textContent = "price: " + data.price;
+     modal.querySelector(".modal-alcohol").textContent = "alcohol: " + data.alcohol;
+     modal.querySelector(".modal-region").textContent = "region: " + data.region;
+     modal.querySelector(".modal-allergens").textContent = "allergens: " + data.allergens;
+     modal.querySelector(".modal-stars").textContent = "stars: " + data.stars;
     modal.classList.remove("hide");
 }
+
+
