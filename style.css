@@ -9,7 +9,6 @@ html {
 body {
     margin: 0;
     align-content: center;
-
     font-family: sans-serif;
     background-color: #8C9DA1;
     line-height: 1.8rem;
@@ -91,12 +90,8 @@ nav a:hover {
 
 }
 
-
 .dish {
     position: relative;
-
-
-
 }
 
 img {
@@ -107,7 +102,6 @@ img {
 }
 
 .head {
-    /*    margin: 6px;*/
     text-align: center;
 }
 
@@ -223,19 +217,6 @@ footer {
     margin: 1em;
     padding: 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .counter {
     text-align: center;
