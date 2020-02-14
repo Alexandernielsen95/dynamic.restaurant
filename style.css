@@ -27,8 +27,6 @@ body {
     margin: 0;
 }
 
-
-
 h2 {
     text-align: center
 }
@@ -43,7 +41,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-/*
+    /*
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -84,11 +82,12 @@ nav a:hover {
 
 .dish {
     display: grid;
-    background-color: #ABFFA6;
+/*    background-color: #ABFFA6;*/
+    background-color: #D3FEDD;
     margin-top: 10px;
     max-width: 400px;
     margin: 0 auto;
-    border-radius:15px;
+    border-radius: 15px;
 
 }
 
@@ -184,6 +183,7 @@ img {
     box-shadow: 2px 2px 0px 0px pink;
     transition: all 0.1s;
 }
+
 /*
 .buttons {
 
